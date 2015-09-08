@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+  <meta charset="UTF-8">
+  <title>App</title>
+  <link rel="stylesheet" href="assets/css/app.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,300,100|Montserrat:400,700">
+  <link rel="stylesheet" href="http://erikflowers.github.io/weather-icons/css/weather-icons.css">
+</head>
+<body>
+
+  <ng-view></ng-view>
+
+  <section class="wrap">
+    <ul class="default-list weather-list">
+      <li class="weather-list-line"></li>
+      <li class="weather-block weather-add-new">
+        <a href="#" class="add-icon">+</a>
+        <h2>Add new Place</h2>
+      </li>
+
+      <li class="weather-block weather-item rounded with-shadow">
+          <header class="weather-header">
+            <div class="config">Conf</div>
+            <div class="weather-image">
+              <i class="wi wi-day-sunny"></i>
+            </div>
+            <h2>Sunny Day</h2>
+            <h3>São Paulo - SP</h3>
+          </header>
+
+          <footer class="weather-footer">
+            <div class="temperature-info">
+              <div class="temp-info currently">0 Cº</div>
+              <div class="temp-info minimum">0 Cº</div>
+              <div class="temp-info maximum">0 Cº</div>
+            </div>
+          </footer>
+      </li>
+
+      <li class="weather-block weather-item rounded with-shadow">
+          <header class="weather-header">
+            <div class="config">Conf</div>
+            <div class="weather-image">
+              <i class="wi wi-day-sunny"></i>
+            </div>
+            <h2>Sunny Day</h2>
+            <h3>São Paulo - SP</h3>
+          </header>
+
+          <footer class="weather-footer">
+            <div class="temperature-info">
+              <div class="temp-info currently">0 Cº</div>
+              <div class="temp-info minimum">0 Cº</div>
+              <div class="temp-info maximum">0 Cº</div>
+            </div>
+          </footer>
+      </li>
+
+      <li class="weather-block weather-item rounded with-shadow">
+          <header class="weather-header">
+            <div class="config">Conf</div>
+            <div class="weather-image">
+              <i class="wi wi-day-sunny"></i>
+            </div>
+            <h2>Sunny Day</h2>
+            <h3>São Paulo - SP</h3>
+          </header>
+
+          <footer class="weather-footer">
+            <div class="temperature-info">
+              <div class="temp-info currently">0 Cº</div>
+              <div class="temp-info minimum">0 Cº</div>
+              <div class="temp-info maximum">0 Cº</div>
+            </div>
+          </footer>
+      </li>
+    </ul>
+  </section>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
