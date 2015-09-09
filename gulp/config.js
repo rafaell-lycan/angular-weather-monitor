@@ -1,5 +1,5 @@
 var dest = "./build";
-var src = './app/';
+var src = './src/app';
 
 // var paths = {
 //   scripts: ['./app/src/js/**/*.js'],
@@ -13,23 +13,41 @@ var src = './app/';
 
 module.exports = {
   browsersync : {
-    spaSelector : '[ng-app]',
-    dest : dest,
-    sass : src + 'src/scss/**/*.scss',
-    html : src + 'src/**/*.html',
-    scripts : src + 'src/**/*.js'
+    server: {
+      baseDir: [dest, src]
+    },
+    port           : 3000,
+    reloadDelay    : 777,
+    reloadDebounce : 333,
+    index          : dest + 'index.html',
+    debugInfo      : true,
+    notify         : true,
+    open           : false,
+    injectChanges  : true,
+    ghostMode : {
+      clicks   : true,
+      location : true,
+      forms    : true,
+      scroll   : true
+    },
+    files: [
+      src + '/scss/**/*.scss',
+      src + '/**/*.js',
+      src + '/img/**',
+      src + '/**/*.html'
+    ]
   },
   clean : {
     dest : dest
   },
   scripts : {
     fileName : 'app.js',
-    src: src + 'src/js/app.js',
+    src: src + '/js/app.js',
     dest : dest + '/assets/js'
   },
   sass: {
     src: [
-      src + 'src/scss/**/*.scss'
+      src + '/scss/**/*.scss'
     ],
     dest: dest + '/assets/css'
   },
@@ -41,8 +59,14 @@ module.exports = {
   },
   views : {
     src : [
-      src + 'src/views/*.html'
+      src + '/views/*.html'
     ],
     dest : dest + '/views'
+  },
+  watch: {
+    html:    src + '/**/*.html',
+    sass:    src + '/scss/**/*.{sass,scss}',
+    scripts: src + '/**/*.js',
+    images:  src + '/img/**/*'
   }
 };

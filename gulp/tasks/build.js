@@ -3,7 +3,10 @@ var gulp = require('gulp'),
 
 gulp.task('build', function (callback) {
   runSequence('clean',
-      ['sass','scripts','copy-templates'],
-      'browsersync',
+      [
+        'copy:html',
+        'sass',
+        'scripts'
+      ],
       callback);
 });
