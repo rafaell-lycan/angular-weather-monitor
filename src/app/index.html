@@ -9,76 +9,20 @@
 </head>
 <body>
 
-  <ng-view></ng-view>
+  <header class="header">
+    <div class="brand">
+      <h1>Weather App</h1>
+    </div>
+    <nav class="menu">
+      <ul class="default-list">
+        <li><a href="#">Sing in</a></li>
+        <li><a href="#">Sing Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <section class="wrap">
-    <header class="header">
-      <h1>Weather App</h1>
-    </header>
-
-    <ul class="default-list weather-list">
-      <li class="weather-block weather-add-new">
-        <a href="#" class="add-icon">+</a>
-        <h2>Add new Place</h2>
-      </li>
-
-      <li class="weather-block weather-item rounded with-shadow">
-          <header class="weather-header">
-            <div class="config">Conf</div>
-            <div class="weather-image">
-              <i class="wi wi-day-sunny"></i>
-            </div>
-            <h2>Sunny Day</h2>
-            <h3>São Paulo - SP</h3>
-          </header>
-
-          <footer class="weather-footer">
-            <div class="temperature-info">
-              <div class="temp-info currently">0 Cº</div>
-              <div class="temp-info minimum">0 Cº</div>
-              <div class="temp-info maximum">0 Cº</div>
-            </div>
-          </footer>
-      </li>
-
-      <li class="weather-block weather-item rounded with-shadow">
-          <header class="weather-header">
-            <div class="config">Conf</div>
-            <div class="weather-image">
-              <i class="wi wi-day-sunny"></i>
-            </div>
-            <h2>Sunny Day</h2>
-            <h3>São Paulo - SP</h3>
-          </header>
-
-          <footer class="weather-footer">
-            <div class="temperature-info">
-              <div class="temp-info currently">0 Cº</div>
-              <div class="temp-info minimum">0 Cº</div>
-              <div class="temp-info maximum">0 Cº</div>
-            </div>
-          </footer>
-      </li>
-
-      <li class="weather-block weather-item rounded with-shadow">
-          <header class="weather-header">
-            <div class="config">Conf</div>
-            <div class="weather-image">
-              <i class="wi wi-day-sunny"></i>
-            </div>
-            <h2>Sunny Day</h2>
-            <h3>São Paulo - SP</h3>
-          </header>
-
-          <footer class="weather-footer">
-            <div class="temperature-info">
-              <div class="temp-info currently">0 Cº</div>
-              <div class="temp-info minimum">0 Cº</div>
-              <div class="temp-info maximum">0 Cº</div>
-            </div>
-          </footer>
-      </li>
-    </ul>
+    <ng-view></ng-view>
   </section>
 
   <script src="assets/js/app.js"></script>

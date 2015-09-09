@@ -7,7 +7,7 @@
 
     $routeProvider
       .when('/', {
-        template: '<h1>{{vm.name}}</h1>',
+        templateUrl: 'views/home.html',
         controller: 'WeatherController',
         controllerAs: 'vm'
       })
